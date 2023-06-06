@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+<link rel="stylesheet" href="{% static 'CSS/mensaje.css' %}">
+
+
+<section class="mensaje_enviado">
+    <div class="contenedor" id="contenedor_mensaje">
+      <div class="overlay1" id="overlay_mensaje">
+        <div class="popup" id="popup_mensaje">
+          <form action="{% url 'IND' %}" method="post" enctype="multipart/form-data" class="formulario" id="formulario-mensaje">
+            {% csrf_token %} 
+            <div class="recuadro_gris" id="recuardro_gris-mensaje">
+              <i class="formulario_contacto fa-regular fa-3x fa-envelope"></i>
+              <h1 class="titulo" id="titulo-mensaje">Mensaje enviado</h1>
+
+            </div>
+            <div class="mensaje_gracias" id="mensaje_gracias">
+              <p>
+              <h2>Gracias por comunicarte con nosotros, en un máximo de 48 horas hábiles responderemos tu solicitud.</h2>
+              </p>
+              <div class="formulario_grupo formulario_grupo-btn-enviar">
+                <button class="formulario_btn" id="enviar" type="submit" > OK</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+{% endblock contenido %}

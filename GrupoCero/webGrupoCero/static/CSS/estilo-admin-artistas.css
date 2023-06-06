@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@1,400;1,700;1,800&display=swap');
+
+
+  /*VALIDACION*/
+
+  .modal-body label {
+    width: 400px !important;
+    font-weight: bold !important;
+    display: inline-block !important;
+    margin-top: 20px !important;
+    }
+    .modal-body label.error {
+      color: red !important;
+      font-size: 0.7rem !important;
+      display: block !important;
+      margin-top: 5px !important;
+  }
+  .modal-body input.valid{
+    border: 2px dashed green !important;
+      font-weight: 300 !important;
+      color: green !important;
+  }
+  .modal-body textarea.valid{
+    border: 2px dashed green !important;
+      font-weight: 300 !important;
+      color: green !important;
+  }
+  .modal-body select.valid{
+    border: 2px dashed green !important;
+      font-weight: 300 !important;
+      color: green !important;
+  }
+  
+  .modal-body input.error {
+      border: 2px dashed red !important;
+      font-weight: 300 !important;
+      color: red !important;
+  }
+  .modal-body textarea.error {
+    border: 2px dashed red !important;
+    font-weight: 300 !important;
+    color: red !important;
+}
+.modal-body select.error {
+  border: 2px dashed red !important;
+  font-weight: 300 !important;
+  color: red !important;
+}
+
+.error-message {
+  color: red !important;
+  font-size: 14px !important;
+  margin-top: 5px !important;
+}
+  /*FIN*/
+
+  .user-profile {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 35em; 
+    height: 11em;
+    background: #ffffffe5;
+    border-radius: .3em;
+    border:2px solid #122835;
+  }
+  .perfil {
+    justify-content: center;
+  }
+  
+  .user-profile  .username {
+    margin: auto;
+    margin-top: -4.40em;
+    margin-left: 6.80em;
+    color: #424e4e;
+    text-shadow: #061414;
+    font-size: 1.53em;
+    font-family: "Sansita Swashed", cursive;
+    font-weight: 500;
+  }
+  .user-profile  .bio {
+    margin: auto;
+    display: inline-block;
+    margin-left: 11.43em;
+    color: #e66042; 
+    text-shadow: #061414;
+    font-size: 1em;
+    font-family: 'Sansita', sans-serif;
+    font-weight: 400;
+  }
+  .user-profile > .description {
+    margin-top: 0.4em;
+    margin-left: 11em;
+
+    width: 14em;
+    color: #424e4e;
+    color: #000000; 
+    text-shadow: #061414;
+    font-size: 1em;
+    font-family: 'Sansita', sans-serif;
+    font-weight: 400;
+  }
+  .user-profile > img.avatar {
+    padding: .7em;
+    margin-left: .3em;
+    margin-top: .3em;
+    height: 10.23em;
+    width: 10.23em;
+    border-radius: 18em;
+  }
+
+  .user-profile label.data{
+    color: #dfd3d3;
+  }
+  
+  .user-profile ul.data {
+    margin-top: 3em;
+    
+    height: 3.70em;
+    background: #7a8d97e5;
+    color: #fff;
+    text-align: center;
+    border-radius: 0 0 .3em .3em;
+  }
+  .user-profile li {
+    margin: auto;
+    width: 33.33334%;
+    display: table-cell;
+    text-align: center;   
+    font-family: 'Sansita', sans-serif;
+    font-weight: 400;
+  }
+
+  
+  .user-profile span {
+    font-family: 'Sansita', sans-serif;
+    font-weight: 400;
+      color: #ffffff;
+    white-space: nowrap;
+    font-size: 1.27em;
+    font-weight: bold;
+  }
+  .user-profile span:hover {
+    color: #daebea;
+  }
+
+
+  .btn1{
+    border: 2px solid #ffffffe5;
+    color: #ffffff;
+    background-color: #5f727ce5;
+  }
+  .btn1:hover{
+    background-color: #23658a;
+  }
+.botoon{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.btnañadir{
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  column-gap: 10px;
+  }
+
+.row{
+  margin-bottom: 30px;
+}
+
+.btn{
+  font-family: 'Sansita', sans-serif;
+  font-weight: 400;
+}
+.modal{
+  font-family: 'Sansita', sans-serif;
+  font-weight: 400;
+}
+
+.boton3{
+  background-color: #7a8d97e5;
+  border-radius: 4px;
+	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+  color: white;
+  display: inline-block;
+  padding: 6px 30px 8px;
+  position: relative;
+  text-decoration: none;
+	transition: all 0.1s 0s ease-out;
+  margin-top: 10px;
+  }
+
+.boton3:hover {
+    background-color: #2a5151;
+    box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+    transform: translateY(-2px);
+    transition: all 0.25s 0s ease-out;
+  }
+
+  .boxxx{
+    background-color: #7a8d97b2;
+    border-radius: 2em;
+    padding: 2em;
+    margin: 2em;
+  }
+  .modal-body {
+    background-color: #7a8d97b2 !important;
+  }
+

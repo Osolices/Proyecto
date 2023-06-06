@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grupo Cero</title>
+
+  <link rel="stylesheet" href="{% static 'CSS/navbar.css' %}" />
+  <link href="{% static 'CSS/bootstrap.min.css' %} "rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'CSS/base.css' %}" />
+  <link rel="stylesheet" href="{% static 'CSS/remixicon.css' %}" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Sansita+Swashed">
+
+</head>
+
+<main>
+
+
+<body>
+<link rel="stylesheet" href="{% static 'CSS/registro.css' %}">
+
+    <div class="container w-75 bg-primary mt-5 rounded shadow">
+        <div class="row align-items-lg-stretch">
+            <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl rounded" style="background-image: {% static 'IMG/blake-cheek-ohqYJjYB6zM-unsplash.jpg' %}">
+
+            </div>
+            <div class="col bg-white p-5 rounded-end">
+                <div class="text-end">
+                    <img src="{% static 'IMG/Logobg.png' %}" width="100" alt="">
+                </div>
+                <h2 class="fw-bold text-center py-5">¿Deseas Registrarte?</h2>
+
+                                  <!--Login-->
+                                  <form method = "POST" action="#" id="formulario-usuario" novalidate>
+                                    {% csrf_token %}
+                                    <div class="mb-4 position-relative">
+                                        <label for="nameId" class="form-label">Nombre de Usuario</label>
+                                        {{form.username}}
+                                    </div>
+
+                                    <div class="mb-4 position-relative">
+                                        <label for="nameId" class="form-label">Nombre</label>
+                                        {{form.first_name}}
+                                    </div>
+
+                                    <div class="mb-4 position-relative">
+                                        <label for="nameId" class="form-label">Apellido</label>
+                                        {{form.last_name}}
+                                    </div>
+
+                                    <div class="mb-4 position-relative">
+                                        <label for="email" class="form-label">Correo electrónico</label>
+                                        {{form.email}}
+                                    </div>
+
+                                    <div class="mb-4 position-relative">
+                                        <label for="password" class="form-label">Contraseña</label>
+                                        {{form.password1}}
+                                    </div>
+                
+                                    <div class="mb-4 position-relative">
+                                        <label for="password1" class="form-label">Repite Contraseña</label>
+                                        {{form.password2}}
+                                    </div>
+                
+                                    <div class="mb-4 position-relative">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="checkTerms" name="terminos" required>
+                                            <label for="checkTerms" class="form-check-label">Acepto los terminos y condiciones</label>
+                                            <div class="valid-tooltip">
+                                                Todo bien
+                                            </div>
+                                            <div class="invalid-tooltip">
+                                                Es necesario aceptar los terminos y condiciones 
+                                            </div>
+                                        </div>
+                                    </div>
+                
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary" id="guardar" onclick="Swal.fire({
+                            title: 'Usuario Creado',
+                            showCancelButton:  false,
+                            confirmButtonColor: '#3085d6',
+                            confirmButtonText: 'OK',
+                            
+                          }).then((result) => {
+                            if (result.isConfirmed) {
+                              location.replace('index-registrado.html')
+                            }
+                          })">Crear usuario</button>
+                    </div>
+
+                    {{form.errors}}
+
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-center links">
+                            ¿Ya tienes una cuenta? <a href="ingreso.html" class="ml-2">Login</a>
+                        </div>
+                    </div>
+
+                </form>
+
+    </div>
+</div>
+</div>
+
+<script src="{% static 'JS/registro.js' %}"></script>
+</main>
+
+<script src="https://kit.fontawesome.com/7c7186267d.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{% static 'JS/jquery-3.6.4.min.js' %}"></script>
+<script src="{% static 'JS/base.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+
+</body>
+
+</html>

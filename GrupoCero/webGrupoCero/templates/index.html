@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+<link rel="stylesheet" href="{% static 'CSS/index.css' %}" />
+
+    <section class="carrusel">
+      <div class="container" style="align-items: center">
+        <div class="titulos">
+          <div class="row">
+            <div class="col">
+              <h1 style="text-align: center;">Grupo Cero </h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h2 style="text-align: center;">Galeria de Arte Online</h2>
+            </div>
+          </div>
+        </div>
+        
+     </section>
+
+<!---CARRUSEL-->
+<div class="boxxx">
+    <div class="carrusell">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active hidden"
+          aria-current="true" aria-label="Slide 0"></button>
+          {% for obra in obras %}
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{ forloop.counter }}" aria-label="Slide {{ forloop.counter }}"></button>
+  {% endfor %}
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" hidden
+          aria-label="Slide 4"></button>
+        </div>
+        
+
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="{% static 'IMG/bienvenido.jpg' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+
+            </div>
+          </div>
+
+          {% for obra in obras %}
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="{{obra.foto.url}}" class="d-block w-100" alt="...">
+            <a href="{% url 'DES' obra.id_obra %}" class="btn btnmas position-absolute top-0 start-0 btn-outline-light">Ver Mas</a>
+            <div class="carousel-caption d-none d-md-block">
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+<script src="{% static 'JS/carrusel.js' %}"></script>
+{% endblock contenido %}
+
+        {% for obra in obras %}
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            
+            <img src="{{obra.foto.url}}" class="d-block w-100" alt="...">
+            <a href="{% url 'DES' obra.id_obra %}" class="btn btnmas position-absolute top-0 start-0 btn-outline-light">Ver Mas</a>
+            <div class="carousel-caption d-none d-md-block">
+
+            </div>
+          </div>
+        </div>        
+        {% endfor %}

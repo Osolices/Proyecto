@@ -1,0 +1,420 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block contenido %}
+
+    <link rel="stylesheet" href="{% static 'CSS/estilo-admin-artistas.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/cartas.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/carrusel_cartas.css' %}">
+    <script src="{% static 'JS/jquery-3.6.4.min.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+      <!---PROFILE-->
+      <div class="row perfil">
+
+<div class="user-profile">
+
+  {% if foto == None %}
+  <img class="avatar" src="{% static 'IMG/avatar.png' %}" alt="" />
+  <div class="username">{{user.first_name}} {{user.last_name}}</div>
+  <div class="bio">
+    Sin Grupo
+  </div>
+  <div class="description">
+    Sin Descripcion
+  </div>
+  {% else %}
+  <img class="avatar" src="{{foto.avatar.url}}" alt="" />
+  <div class="username">{{user.first_name}} {{user.last_name}}</div>
+  <div class="bio">
+    {{foto.grupo}}
+  </div>
+  <div class="description">
+    {{foto.descripcion}}
+  </div>
+  {% endif %}
+ 
+  <ul class="data">
+    <li>  
+      <label for="aceptadas">Obras Aceptadas</label>
+      <span class="ri-hearts-line"> {{contadora}}</span>
+      <span class="ri-earth-fill aceptada"></span>
+    </li>
+    <li>
+      <label for="rechazadas">Obras en Revision</label>
+      <span class="ri-dislike-line"> {{contadorr}}</span>
+      <span class="ri-earth-fill rechazada"></span>
+    </li>
+ </ul>
+</div>
+ <div class="botoon">
+  <button type="button" class="btn btn1 btn-outline-primary" data-bs-toggle="modal" 
+  data-bs-target="#añadirpublicacion">Añadir nueva Publicación</button>
+  
+  {% if foto == None %}
+  <span>-------------</span>
+  <button type="button" class="btn btn1 btn-outline-primary" data-bs-toggle="modal" 
+  data-bs-target="#añadiravatar">Añadir Perfil</button>
+  {% endif %} 
+ </div>
+ <!-- Modal -->
+<div class="modal fade" id="añadirpublicacion" tabindex="-1" aria-labelledby="añadirpublicacion" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nueva Publicacion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form name="añadirobra" id="añadirobra" action="{% url 'PERF' %}" method="post" enctype="multipart/form-data" onsubmit="return validarPublicacion()">
+        {% csrf_token %}
+        <input type="hidden" name="txtform" value="1">
+          <div class="mb-3">
+            <label for="customFile" class="form-label">Obra</label>
+            <input type="file" class="form-control" name="customFile" id="customFile"/>
+            <label id="customFileError" class="error-message" style="display: none !important;">Por favor, selecciona una imagen.</label>
+          </div>
+        <div class="mb-3">
+          <label for="txttitulo" class="form-label">Titulo de la Obra</label>
+          <input type="text" class="form-control" name="txttitulo" placeholder="Titulo">
+        </div>
+        <div class="mb-3">
+          <label for="txtdescripcion" class="form-label">Historia</label>
+          <textarea class="form-control" name="txthistoria" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="txthistoria" class="form-label">Descripcion de la Obra</label>
+          <textarea class="form-control" name="txtdescripcion" rows="3"></textarea>
+        </div>
+        <div class="mb-3 col-1">
+          <label for="cbotecnica" class="form-label">Tecnica</label>
+          <select class="form-control-sm"" name="cbotecnica"  rows="3">
+            {% for item in tec %}
+            <option value="{{item.nombre}}">{{item.nombre}}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="mb-3 col-1">
+          <label for="cbocategoria" class="form-label">Categoria</label>
+          <select class="form-control-sm"" name="cbocategoria" rows="3">
+            {% for item in cate %}
+            <option value="{{item.nombre}}">{{item.nombre}}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="mb-3 col-1">
+          <label for="txtprecio" class="form-label">Precio</label>
+          <input type="number" class="form-control-sm" name="txtprecio" rows="3" placeholder="$">
+        </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" > Cancelar</button>
+        <button type="button" class="btn btn-primary" onclick="Swal.fire({
+          title: '¿Estas seguro?',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Si, publicar!',
+          cancelButtonText: 'Cancelar  '
+        }).then((result) => {
+          if (result.isConfirmed) {
+            validarPublicacion(event);
+            }
+        });">Publicar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+
+           <!-- END PROFILE -->
+
+           <!--CARTAS-->
+<div class="boxxx"> 
+<section class="artistas">
+       <div class="artistaa">
+        
+        {% for obra in obras  %}
+        
+
+
+
+ <!-- Modal MODIFICAR-->
+ <div class="modal fade" id="modificarobra{{obra.id_obra}}" tabindex="-1" aria-labelledby="modificarobra" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{obra.nombre}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form name="modificarobra-{{obra.id_obra}}" id="modificarobra-{{obra.id_obra}}" class="form-modificarobra" action="{% url 'PERF' %}" method="post" enctype="multipart/form-data" >
+        {% csrf_token %}
+        <input type="hidden" name="txtform" value="4">
+        <input type="hidden" name="txtid" id="txtid" value="{{obra.id_obra}}">
+          <div class="mb-3">
+            <img src="{{obra.foto.url}}" alt="" style="width: 50%; margin-left: 7em; border: 4px solid white; border-radius: 5px;">
+            <label for="customFile" class="form-label">Obra</label>
+            <input type="file" class="form-control" name="customFile" id="customFile" />
+            <label id="customFileError" class="error-message" style="display: none !important;">Por favor, selecciona una imagen.</label>
+            </div>
+        <div class="mb-3">
+          <label for="txttitulo" class="form-label">Titulo de la Obra</label>
+          <input type="text" class="form-control" name="txttitulo" placeholder="{{obra.nombre}}" value="{{obra.nombre}}">
+        </div>
+        <div class="mb-3">
+          <label for="txtdescripcion" class="form-label">Historia</label>
+          <textarea class="form-control" name="txthistoria" rows="3">{{obra.historia}}</textarea>
+        </div>
+        <div class="mb-3">
+          <label for="txthistoria" class="form-label">Descripcion de la Obra</label>
+          <textarea class="form-control" name="txtdescripcion" rows="3">{{obra.descripcion}}</textarea>
+        </div>
+        <div class="mb-3 col-1">
+          <label for="cbotecnica" class="form-label">Tecnica</label>
+          <select class="form-control-sm"" name="cbotecnica"  rows="3">
+            <option value="{{obra.tecnica}}" class="active">{{obra.tecnica}}</option>
+            {% for item in tec %}
+            {% if  item.nombre == obra.tec.nombre %}
+            <option selected value="{{item.nombre}}">{{item.nombre}}</option>
+            {% else %}
+            <option value="{{item.nombre}}">{{item.nombre}}</option>
+            {% endif %}
+            {% endfor %}
+          </select>
+        </div>
+        <div class="mb-3 col-1">
+          <label for="cbocategoria" class="form-label">Categoria</label>
+          <select class="form-control-sm"" name="cbocategoria" rows="3">
+            <option value="{{obra.categoria}}" class="active">{{obra.categoria}}</option>
+            {% for item in cate %}
+            <option value="{{item.nombre}}">{{item.nombre}}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="mb-3 col-1">
+          <label for="txtprecio" class="form-label">Precio</label>
+          <input type="number" class="form-control-sm" name="txtprecio" rows="3" value="{{obra.precio}}">
+        </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" > Cancelar</button>
+        <button type="button" class="btn btn-primary" onclick="Swal.fire({
+          title: '¿Estas seguro?',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Si, Modificar!',
+          cancelButtonText: 'Cancelar  '
+        }).then((result) => {
+          if (result.isConfirmed) {
+            document.getElementById('modificarobra-{{obra.id_obra}}').submit();
+            }
+        });">Modificar</button>
+      </div>
+    </div>
+  </div>
+</div>
+        <!--MODAL GALERIA-->
+        
+<div class="modal fade" id="añadirgaleria{{obra.id_obra}}" tabindex="-1" aria-labelledby="añadirgaleria" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+  <h5 class="modal-title" >Nueva Imagen de {{obra.nombre}}</h5>
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+  <form name="añadirgaleria-{{ obra.id_obra }}" id="añadirgaleria-{{obra.id_obra}}" class="form-añadirgaleria" data-idobra="{{obra.id_obra}}" action="{% url 'PERF' %}" method="post" 
+  enctype="multipart/form-data" onsubmit="return validarGaleria(idobra)">
+  {% csrf_token %}
+  <input type="hidden" name="txtform" value="2">
+  <div class="mb-3">
+    <label for="imggaleria" class="form-label" name="idobra">ID Obra: {{obra.id_obra}}</label>
+    <input type="hidden" name="txtid" value="{{obra.id_obra}}">
+  </div>
+    <div class="mb-3">
+      <input type="file" class="form-control" name="imggaleria1" id="imggaleria1-{{obra.id_obra}}"/>
+      <label id="imggaleria1Error-{{obra.id_obra}}" class="error-message" style="display: none !important ;">Por favor, selecciona una imagen.</label>
+    </div>
+  <div class="mb-3">
+    <label for="txtangulo1" class="form-label">Angulo N°1</label>
+    <input type="text" class="form-control" name="txtangulo1" rows="3"></input>
+  </div>
+  <div class="mb-3">
+    <label for="imggaleria2" class="form-label">Imagen N°2</label>
+    <input type="file" class="form-control" name="imggaleria2" id="imggaleria2-{{obra.id_obra}}"/>
+    <label id="imggaleria2Error-{{obra.id_obra}}" class="error-message" style="display: none !important;">Por favor, selecciona una imagen.</label>
+  </div>
+<div class="mb-3">
+  <label for="txtangulo2" class="form-label">Angulo N°2</label>
+  <input type="text" class="form-control" name="txtangulo2" rows="3"></input>
+</div>
+<div class="mb-3">
+  <label for="imggaleria3" class="form-label">Imagen N°3</label>
+  <input type="file" class="form-control" name="imggaleria3" id="imggaleria3-{{obra.id_obra}}"/>
+  <label id="imggaleria3Error-{{obra.id_obra}}" class="error-message" style="display: none !important;">Por favor, selecciona una imagen.</label>
+</div>
+<div class="mb-3">
+<label for="txtangulo3" class="form-label">Angulo N°3</label>
+<input type="text" class="form-control" name="txtangulo3" rows="3"></input>
+</div>
+  </form>
+  </div>
+  <div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" > Cancelar</button>
+  <button type="button" class="btn btn-primary" onclick="Swal.fire({
+    title: '¿Estás seguro?',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Sí, publicar!',
+    cancelButtonText: 'Cancelar'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      validarGaleria(event, '{{obra.id_obra}}');
+    }
+  });">Publicar</button>
+  </div>
+  </div>
+  </div>
+  </div>
+  <!--MODAL GALERIA-->
+
+
+
+
+        <article>
+          <div class="card">
+            <div class="content">
+            {% if  obra.estado %}
+             <div class="back">
+            {% else %}
+            <div class="back false" ;>
+            {% endif %}
+
+                <div class="back-content">
+                  <img class="profile-pic" src="{{obra.foto.url}}" width="100" alt="">
+
+                  <strong>{{obra.nombre}}</strong>
+
+                 
+                </div>
+              </div>
+              <div class="front">
+
+                <div class="front-content" > 
+                  <small class="badge">Estado</small>
+                  {% if obra.estado == True %}
+                  <h2 class= "desc">Aceptada</h2>
+                  {% else %}
+                  <h2 class= "desc">Por aprobar</h2>
+                  {% endif %}
+                  <small class="badge">Comentario</small>
+                  <h2 class= "desc">{{obra.comentario}}</h2>
+                  
+
+                  <section id="slideshow">
+                    <div class="entire-content">
+                      <div class="content-carrousel">
+                      
+                      {% for item in gale  %}
+                        {% if  obra.id_obra == item.obra.id_obra %}
+                        <figure class="shadow"><img src="{{item.foto_1.url}}" /></figure>
+                        <figure class="shadow"><img src="{{item.foto_2.url}}" /></figure>
+                        <figure class="shadow"><img src="{{item.foto_3.url}}" /></figure>
+                        {% endif %}
+                      {% endfor %}
+                      
+                        
+
+
+                      </div>
+                    </div>
+                  </section>
+
+                  <p class="card-footer">
+                    Precio: &nbsp; $ &nbsp; {{obra.precio}}
+                  </p>
+        
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        <div class="btnañadir">
+        
+          <input type="button" class="btn btn1 btn-outline-primary" data-bs-toggle="modal" 
+          data-bs-target="#añadirgaleria{{obra.id_obra}}" data-idobra="{{obra.id_obra}}" value="Agregar a Galería">
+          <input type="button" class="btn btn1 btn-outline-primary" data-bs-toggle="modal" 
+          data-bs-target="#modificarobra{{obra.id_obra}}" data-idobra="{{obra.id_obra}}" value="Modificar">
+          <a href="{% url 'DES' obra.id_obra %}"><input type="button" class="btn btn1 btn-outline-primary" value="Ver Mas"></a>
+        
+          
+          
+        </div>
+        </article>
+        
+         {% endfor %}
+      </div>
+     
+      </section>
+</div>  
+ <!--MODAL Perfil-->
+
+<div class="modal fade" id="añadiravatar" tabindex="-1" aria-labelledby="añadiravatar" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Perfil de {{user.first_name}} {{user.last_name}}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form name="añadirperfil" id="añadirperfil" action="{% url 'PERF' %}" method="post" enctype="multipart/form-data" onsubmit="return validarPerfil()">
+        {% csrf_token %}
+        <input type="hidden" name="txtform" value="3">
+        <div class="mb-3">
+          <input type="hidden" name="txtusername" value="{{user.username}}">
+        </div>
+        <div class="mb-3">
+          <label for="imgavatar" class="form-label">Imagen de Perfil</label>
+          <input type="file" class="form-control" name="imgavatar" id="imgavatar"/>
+          <label id="imgavatarError" class="error-message" style="display: none !important;">Por favor, selecciona una imagen.</label>
+        </div>
+        <div class="mb-3">
+          <label for="txtgrupo" class="form-label">Grupo</label>
+          <input type="text" class="form-control" name="txtgrupo" rows="3"></input>
+        </div>
+        <div class="mb-3">
+          <label for="txtdespcripcionn" class="form-label">Descripcion</label>
+          <textarea type="text" class="form-control" name="txtdespcripcionn" rows="3">Sin Descripcion</textarea>
+        </div>
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" > Cancelar</button>
+        <button type="button" class="btn btn-primary" onclick="Swal.fire({
+          title: '¿Estas seguro?',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Si, publicar!',
+          cancelButtonText: 'Cancelar  '
+        }).then((result) => {
+          if (result.isConfirmed) {
+            validarPerfil(event);
+            }
+        });">Añadir</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!--MODAL Perfil-->
+
+
+<script src="{% static 'JS/validacion_publicacion.js' %}"></script>
+<script src="{% static 'JS/validacion_publicacion2.js' %}"></script>
+{% endblock contenido %}

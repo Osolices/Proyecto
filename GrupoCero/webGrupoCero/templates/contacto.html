@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+<link rel="stylesheet" href="{% static 'CSS/estiloIngreso.css' %}">
+
+<div class="contenedor">
+        
+    <div class="overlay1" id="overlay1">
+        <div class="popup" id="popup">
+            <form action="{% url 'CONT' %}" method="post" enctype="multipart/form-data" class="formulario" id="formulario">
+                {% csrf_token %}               
+                <div class="recuadro_gris" id="recuardro_gris">
+                    <i class="formulario_contacto fa-regular fa-3x fa-envelope"></i>
+                    <h1 class="titulo" id="titulo">Contáctenos</h1>
+                </div>
+            <!--grupo nombre-->
+            <div class="formulario_grupo" id="grupo_nombre">
+                <label for="nombre" class="formulario_label">Nombre:</label>
+                <div class="formulario_grupo-input">
+                    <input type="text" class="formulario_input" name="nombre" id="txtnombre" placeholder="Nombre y Apellido" onchange="validarNombre()">
+                    <i class="formulario_validacion_estado fa-solid fa-circle"></i>
+                </div>
+                <p class="formulario_input-error">El nombre debe ser de largo 3 minímo</p>
+            </div>
+            <!--grupo: Rut -->
+            <div class="formulario_grupo" id="grupo_rut">
+                <label for="rut" class="formulario_label">Rut:</label>
+                <div class="formulario_grupo-input">
+                    <input type="text" class="formulario_input" name="rut" id="txtrut" placeholder="04603721-9" onchange="validaRut()">
+                    <i class=" formulario_validacion_estado fa-solid fa-circle"></i>
+                </div>
+                <p class="formulario_input-error">El rut debe tener un largo 10 y el dv debe ser correcto</p>
+            </div>
+
+            <!--grupo: Correo -->
+            <div class="formulario_grupo" id="grupo_correo">
+                <label for="correo" class="formulario_label">Correo:</label>
+                <div class="formulario_grupo-input">
+                    <input type="email" class="formulario_input" name="correo" id="txtcorreo" placeholder="Correo@email.com" onchange="validarCorreo()">
+                    <i class=" formulario_validacion_estado fa-solid fa-circle"></i>
+                </div>
+                <p class="formulario_input-error">El correo debe tener formato @email </p>
+            </div>
+
+            <!--grupo: teléfono -->
+            <div class="formulario_grupo" id="grupo_telefono">
+                <label for="telefono" class="formulario_label">Teléfono:</label>
+                <div class="formulario_grupo-input">
+                    <input type="text" class="formulario_input" name="telefono" id="txttelefono" placeholder="+56999999999" onchange="validarTelefono()">
+                    <i class=" formulario_validacion_estado fa-solid fa-circle"></i>
+                </div>
+                <p class="formulario_input-error">El teléfono debe tener largo 8 </p>
+            </div>
+
+            <!--grupo: Descripción -->
+            <div class="formulario_grupoD" id="grupo_descripcion">
+                <label for="descripcion" class="formulario_label">Descripción:</label>
+                <div class="formulario_grupo-input">
+                    <textarea type="text" class="formulario_input" name="descripcion" id="txtdescripcion" placeholder="Hola, estoy interesada en..."></textarea>
+                </div>
+            </div>
+
+           
+
+            <div class="formulario_grupo formulario_grupo-btn-enviar">
+                <button class="formulario_btn" id="enviar" type="submit" > Enviar</button>
+                
+
+            </div>
+
+            </form>
+        </div>    
+    </div>
+
+</div>   
+<script src="{% static 'JS/Contacto.js' %}"></script> 
+{% endblock contenido %}

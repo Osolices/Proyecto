@@ -1,0 +1,117 @@
+{% extends "base.html" %} 
+{% load static %} 
+
+{% block contenido %}
+
+<link rel="stylesheet" href="{% static 'CSS/descripcion.css' %}">
+<link rel="stylesheet" href="{% static 'CSS/carrusel_descripcion.css' %}">
+<!---Info Obra de arte-->
+
+
+	<div class="contenedor-texto">
+		<h1>{{obra.nombre}}</h1>
+    </div>
+	<div class="boxxx">
+	<!--CARRUSEL ///https://webdesign.tutsplus.com/articles/best-css-and-javascript-carousel-tutorials--cms-92882\\\-->
+	<input type="radio" id="image1" name="image" checked>
+	<input type="radio" id="image2" name="image">
+	<input type="radio" id="image3" name="image">
+	
+	<div class="boxx">
+	  <div class="featured-wrapper">
+		<ul class="featured-list">
+		{% if galeria == None %}
+		<li>
+			<figure>
+			  <img class="cimg pimg" src="{{obra.foto.url}}" alt="">
+			</figure>
+		  </li>
+		{% else %}
+		<li>
+			<figure>
+			  <img class="cimg pimg" src="{{galeria.foto_1.url}}" alt="">
+			</figure>
+		  </li>
+		  <li>
+			<figure>
+			  <img class="cimg pimg" src="{{galeria.foto_2.url}}" alt="">
+			</figure>
+		  </li>
+			<li>
+			<figure>
+			  <img class="cimg pimg" src="{{galeria.foto_3.url}}" alt="">
+			</figure>
+		  </li>
+		</ul>
+		<ul class="arrows">
+		  <li>
+			<label for="image1"></label>
+		  </li>
+		  <li>
+			<label for="image2"></label>
+		  </li>
+		  <li>
+			<label for="image3"></label>
+		  </li>
+		</ul>
+		<ul class="dots">
+		  <li>
+			<label for="image1"></label>
+		  </li>
+		  <li>
+			<label for="image2"></label>
+		  </li>
+		  <li>
+			<label for="image3"></label>
+		  </li>
+		</ul>
+		{% endif %}
+			
+	  </div>
+	  <ul class="thumb-list">
+		<li>
+		  <label for="image1">
+			<img class="cimg" src="{{galeria.foto_1.url}}" alt="">
+			<span class="outer">
+			  <span class="inner">{{galeria.angulo_1}}</span>
+			</span>
+		  </label>
+		</li>	
+		<li>
+		  <label for="image2">
+			<img class="cimg" src="{{galeria.foto_2.url}}" alt="">
+			<span class="outer">
+			  <span class="inner">{{galeria.angulo_2}}</span>
+			</span>
+		  </label>
+		</li>
+		<li>
+		  <label for="image3">
+			<img class="cimg" src="{{galeria.foto_3.url}}" alt="">
+			<span class="outer">
+			  <span class="inner">{{galeria.angulo_3}}</span>
+			</span>
+		  </label>
+		</li>	
+	  </ul>
+	</div>
+</div>
+
+
+	<!--FIN CARRUSEL-->
+
+
+
+
+	<div class="contenedor-texto2">
+		<h2>Artista : {{obra.autor.first_name}} {{obra.autor.last_name}}</h2>
+		<h3>Tipo : {{obra.categoria}}</h3>
+    <h3>Tecnica : {{obra.tecnica}}</h3>
+    <h3>Precio  : $ {{obra.precio}}</h3>
+		<h3>Descripcion : {{obra.descripcion}}</h3>
+		<h3>Info: </h3>
+    <p>{{obra.historia}}</p>
+	</div>
+
+
+{% endblock contenido %}

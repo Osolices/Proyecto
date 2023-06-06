@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+<link rel="stylesheet" href="{% static 'CSS/estiloIngreso.css' %}">
+
+
+<section class="mensaje_enviado">
+    <div class="contenedor" id="contenedor_mensaje">
+      <div class="overlay1" id="overlay_mensaje">
+        <div class="popup" id="popup_mensaje">
+          <form action="{% url 'IND' %}" method="post" enctype="multipart/form-data" class="formulario" id="formulario-mensaje">
+            {% csrf_token %} 
+            <div class="recuadro_gris" id="recuardro_gris-mensaje">
+              <i class="formulario_contacto fa-regular fa-3x fa-envelope"></i>
+              <h1 class="titulo" id="titulo-mensaje">Mensaje en camino</h1>
+
+            </div>
+            <!--grupo: Correo -->
+            <div class="formulario_grupo" id="grupo_correo">
+              <label for="correo" class="formulario_label">Ingresa tu correo:</label>
+              <div class="formulario_grupo-input">
+                  <input type="email" class="formulario_input" name="correo" id="correo" placeholder="Correo@email.com" onchange="validarCorreo()">
+                  <i class=" formulario_validacion_estado fa-solid fa-circle"></i>
+              </div>
+              <p class="formulario_input-error">El correo debe tener formato @email </p>
+          </div>
+            <div class="mensaje_gracias" id="mensaje_gracias">
+              <p>
+              <h2>Enviaremos una clave a tu correo electrónico para recuperar contraseña.</h2>
+              </p>
+              <div class="formulario_grupo formulario_grupo-btn-enviar">
+                <button class="formulario_btn" id="enviar" type="submit" > OK</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <script src="{% static 'JS/olvideContraseña.js' %}"></script>
+
+{% endblock contenido %}

@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@1,400;1,700;1,800&display=swap');
+
+
+.contenedor-img{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+margin: auto;
+padding: 0px 0;
+}
+
+.contenedor-texto{
+  display: grid;
+    margin: auto;
+    padding: 0px 0;
+    background: rgba(255, 255, 255, 0.575);
+    border: 2px solid #122835;
+    border-radius: 10%;
+    margin: 20px;
+    width: 500px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+}
+
+.contenedor-texto2{
+  display: grid;
+    margin: auto;
+    padding: 0px 0;
+    background: rgba(255, 255, 255, 0.575);
+    border: 2px solid #122835;
+    border-radius: 10%;
+    margin: 20px;
+}
+
+.contenedor-img img{
+  height: 800px;
+  border: 10px solid rgba(255, 255, 255, 0.582);
+  margin: 20px;
+}
+
+.contenedor-texto p{
+  font-family: 'Sansita', sans-serif;
+  font-weight: 400;
+  font-size: large;
+  color: rgb(0, 0, 0);
+  margin: 20px;
+}
+.contenedor-texto2 p{
+  font-family: 'Sansita', sans-serif;
+  font-weight: 400;
+  font-size: large;
+  color: rgb(0, 0, 0);
+  margin: 20px;
+}
+.contenedor-texto h1,h2{
+  font-family: "Sansita Swashed";
+  font-weight: 500;
+  font-size: xx-large;
+  color: rgb(0, 0, 0);
+  margin: 20px;
+  text-align: center;
+}
+.contenedor-texto2 h1,h2{
+  font-family: "Sansita Swashed";
+  font-weight: 500;
+  font-size: xx-large;
+  color: rgb(0, 0, 0);
+  margin: 20px;
+  text-align: center;
+}
+.contenedor-texto h3{
+  font-family: "Sansita Swashed";
+  font-weight: 500;
+  font-size: medium;
+  color: rgb(0, 0, 0);
+  margin: 10px;
+}
+.contenedor-texto2 h3{
+  font-family: "Sansita Swashed";
+  font-weight: 500;
+  font-size: medium;
+  color: rgb(0, 0, 0);
+  margin: 10px;
+}
+.boxxx{
+  background-color: #7a8d97b2;
+  border-radius: 2em;
+  padding: 2em;
+  margin: 2em;
+}

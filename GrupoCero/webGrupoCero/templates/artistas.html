@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+  <link rel="stylesheet" href="{% static 'CSS/artistas.css' %}">
+  <link rel="stylesheet" href="{% static 'CSS/not.css' %}"/>
+
+  <!-- ARTISTAS -->
+
+  <section class="artistas">
+    <div class="contenedor-texto">
+      <h1 style="text-align: center;">Artistas del Grupo Cero</h1>
+    </div>
+
+    {% if artistas.count == 0 %}
+      <div class="contenedor-texto">
+        <h1 style="text-align: center;">¡Lo sentimos! No encontramos resultados para tu búsqueda de "Artistas"</h1>
+      </div>
+      <div id="image-container">
+        <img src="{% static 'IMG/gato.gif' %}" alt="">
+      </div>
+    {% else %}
+      <div class="boxxx">
+        <div class="artistaa">
+          {% for art in artistas %}
+            <article>
+              <div class="card">
+                <div class="content">
+                  <div class="back">
+                    <div class="back-content">
+                      {% for a in foto %}
+                        {% if a.user.username == art.username %}
+                        <div class="textos">
+                          <img class="profile-pic" src="{{ a.avatar.url }}" width="100" alt="">
+                        </div>
+                        {% endif %}
+                      {% endfor %}
+
+                     
+                      <div class="textos">
+                      <strong>{{ art.first_name }} {{ art.last_name }}</strong>
+                    </div> 
+                      <div class="textos">
+                      <small>{{ art.perfiles.grupo }}</small>
+                    </div>
+                    <div class="textos">
+                      <small>{{ art.perfiles.descripcion }}</small>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="front">
+                    <div class="front-content">
+                      <small class="badge">Obras</small>
+                      <section id="slideshow">
+                        <div class="entire-content">
+                          <div class="content-carrousel">
+                            {% for obra in art.obra_set.all %}
+                              {% if obra.estado %}
+                                <figure class="shadow"><img src="{{ obra.foto.url }}" /></figure>
+                              {% endif %}
+                            {% endfor %}
+                          </div>
+                        </div>
+                      </section>
+                      <div class="textos">
+                      <p class="card-footer">
+                        Obras Aceptadas: &nbsp; : &nbsp; {{ art.contadora }}
+                      </p>     
+                    </div>   
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </section>
+
+  <script src="{% static 'JS/artitas.js' %}"></script>
+{% endblock contenido %}

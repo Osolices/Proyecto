@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sansita:ital,wght@1,400;1,700;1,800&display=swap');
+
+
+body {
+  background: #dce1df;
+  background-position: center;
+  color: #4f585e;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}
+
+.header {
+  font-family: 'Sansita', sans-serif;
+  font-weight: 400;
+  font-size: x-large;
+  position: relative;
+}
+
+
+.bg-body-tertiary {
+  background: linear-gradient(60deg, #122835 0%, #65727c 100%) !important;
+}
+
+
+.icon {
+  padding: 10px;
+}
+
+
+
+/*FOOTER*/
+.footer {
+  background: linear-gradient(60deg, #8a98a08c 0%, #65727c8c 100%) no-repeat center;
+  background-size: cover;
+  min-height: 20vh;
+  margin-top: 100px;
+  font-family: "Sansita Swashed", cursive;
+  font-weight: 300;
+  font-size: medium;
+  color: #ffffff;
+  padding-bottom:20px;
+  
+}
+.copy{
+  height: 30px;
+  width: 30px;
+  
+}
+/*ICON*/
+.footer{
+  display: grid;
+place-items: center;
+}
+
+.icons {
+	display: flex;
+	column-gap: 25px;
+
+}
+.icon {
+	display: inline-flex;
+	width: 60px;
+	height: 60px;
+	text-decoration: none;
+	font-size: 26px;
+	color: #fff;
+	border-radius: 50%;
+	outline: 2px solid #fff;
+	transition-property: outline-offset, outline-color, background-color;
+	transition-duration: 0.25s;
+	
+}
+.icon:hover {
+	outline-offset: 4px;
+}
+.icon i {
+	margin: auto;
+}
+.icon:hover i {
+	animation: shake 0.25s;
+}
+.icon--instagram:hover {
+	background-image: radial-gradient(
+		circle at 30% 107%,
+		#fdf497 0%,
+		#fdf497 5%,
+		#fd5949 45%,
+		#d6249f 60%,
+		#285aeb 90%
+	);
+	outline-color: #a02d76;
+}
+.icon--twitter:hover {
+	background-color: #1da1f2;
+	outline-color: #1da1f2;
+}
+.icon--phone:hover {
+	background-color: #a9b500;
+	outline-color: #a9b500;
+}
+.icon--facebook:hover {
+	background-color: #0077b5;
+	outline-color: #0077b5;
+}
+.icon--mail:hover {
+	background-color: #24cd15;
+	outline-color: #24cd15;
+}
+@keyframes shake {
+	10% {
+		transform: rotate(15deg);
+	}
+	20% {
+		transform: rotate(-15deg);
+	}
+	30% {
+		transform: rotate(15deg);
+	}
+	40% {
+		transform: rotate(-15deg);
+	}
+}
+

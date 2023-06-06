@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+<link rel="stylesheet" href="{% static 'CSS/registro2.css' %}">
+<script src="{% static 'JS/jquery-3.6.4.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+<div class="boxxx">
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form id="registro-form" name="registro-form" action="{% url 'REG' %}" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<h1>Crear Cuenta</h1>
+	
+			<span>Crea tu usuario para registrarte</span>
+      			<input id="usuario" name="usuario" type="text" placeholder="Nombre de Usuario"/>
+      			<input id="nombre" name="nombre" type="text" placeholder="Nombre" />
+      			<input id="apellido" name="apellido" type="text" placeholder="Apellido" />
+				<input id="pass1" name="pass1" type="password" placeholder="Contraseña" />
+				<input id="pass2" name="pass2" type="password" placeholder="Repetir Contraseña" />
+			<button type="button" class="" id="guardar" onclick="Swal.fire({
+				title: 'Usuario Registrado',
+				showCancelButton: false,
+				confirmButtonColor: '#3085d6',
+				confirmButtonText: 'OK',
+			  }).then((result) => {
+				if (result.isConfirmed) {
+				  document.getElementById('registro-form').submit();
+				}
+			  });">Registrarse</button>	   
+		</form>	
+	</div>
+	
+	<div class="form-container sign-in-container">
+		<form id="ingreso-form" name="ingreso-form" action="{% url 'ING' %}" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<h1>Ingresar</h1>
+			<span>O utiliza tu cuenta</span>
+			<input id="usuario" name="usuario" type="text" placeholder="Nombre de Usuario" />
+			<input id="pass1" name="pass1" type="password" placeholder="Contraseña" />
+			<a href="{% url 'OLV' %}">¿Olvidaste tu contraseña?</a>
+			<button onclick="">Ingresar</button> 
+			<div style="text-align: center;font-size: s-small;">
+				{{mensaje}}
+			</div> 
+			
+		</form>
+		
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Bienvenido de Vuelta!</h1>
+				<p>Para mantenerte conectado con nosotros, porfavor inrgesa con tu informacion personal</p>
+				<button class="ghost" id="signIn">Ingreso</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hola, Artista!</h1>
+				<p>Registra tu informacion personal y comienza tu Galeria con nosotros</p>
+				<button class="ghost" id="signUp">Registrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+  <script src="{% static 'JS/registro2.js' %}"></script>
+  <script src="{% static 'JS/validacion_registro2.js' %}"></script>
+  
+  {% endblock contenido %}

@@ -1,0 +1,14 @@
+#image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+  }
+
+  #image-container img {
+    border: 4px solid #020202;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+  }

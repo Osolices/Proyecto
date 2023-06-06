@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+<link rel="stylesheet" href="{% static 'CSS/galeria.css' %}"/>
+<link rel="stylesheet" href="{% static 'CSS/not.css' %}"/>
+<link rel="stylesheet" href="{% static 'CSS/filtro.css' %}"/>
+
+
+  <!---ARTE-->
+      <section class="artistas">
+        <div class="contenedor-texto">
+          <h1 style="text-align: center;">Obras del Grupo Cero  </h1>
+         </div> 
+
+         <div class="contenedor-texto2 custom-container">
+          <form action="{% url 'FILTRO_CATE' %}" method="post">
+            {% csrf_token %}
+            <div class="contenedor-texto custom-container-texto">
+              <span class="artistas">Buscar Obras por Categoría:</span>
+              <select class="cbooo" name="cboCategoria">
+                <option>Todos</option>
+                {% for cate in categorias %}                        
+                  <option>{{ cate.nombre }}</option>
+                {% endfor %}
+                
+              </select>
+              <input class="btnbus" type="submit" value="Buscar">
+            </div>
+          </form>
+        </div>
+        <br>
+        
+        {% if cantidad == 0 %}
+        <div class="contenedor-texto">
+          <h1 style="text-align: center;">¡Lo sentimos!
+        No encontramos resultados para tu búsqueda de "Obras"   </h1>
+         </div> 
+         <div id="image-container">
+          <img src="{% static 'IMG/gato.gif' %}" alt="" >
+        </div>
+         
+        {% else %}
+
+<div class="boxxx">
+<div class="artistaa">
+        {% for obra in  obras%}
+        <article>
+          <div class="card">
+            <div class="content">
+              <div class="back">
+                <div class="back-content">
+                
+                  <img class="profile-pic" src="{{obra.foto.url}}" alt="">
+                <div class="textos">
+                      <strong>{{obra.nombre}}</strong>
+                </div>  
+                <div class="textos">   
+                      <small>{{obra.categoria}}</small>
+                </div>  
+                  
+
+                </div>
+ 
+                </div>
+              </div>
+            </div>
+            <div class="btnañadir">
+
+              <a href="{% url 'DES' obra.id_obra %}"><input type="button" class="btn btn1 btn-outline-primary" value="Ver Mas"></a>
+
+            </div>
+        </article>
+        
+{% endfor %}
+        {% endif %}
+  </div>
+</div>
+      </section>
+{% endblock contenido %}  
+   
+
+</html>
