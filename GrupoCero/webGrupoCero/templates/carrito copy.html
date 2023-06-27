@@ -1,0 +1,81 @@
+{% extends 'base.html' %} {% load static %} {% block contenido %}
+<link rel="stylesheet" href="{% static 'CSS/carrito.css' %}" />
+
+<div class="boxxx">
+  <div class="main">
+    <h1>Shopping cart</h1>
+    <h2 class="sub-heading">Free shipping from $100!</h2>
+
+    <section class="shopping-cart">
+      {% if request.session.carrito.items %}
+      {% for key, value in request.session.carrito.items  %}
+      <ol class="ui-list shopping-cart--list" id="shopping-cart--list">
+        <script id="shopping-cart--list-item-template" type="text/template">
+          <li class="_grid shopping-cart--list-item">
+            
+              <div class="_column product-image">
+                <img class="product-image--img" src="{{value.foto}}" alt="Item image" />
+              </div>
+              
+          
+              <div class="_column product-info">
+                <h4 class="product-name">{{value.nombre}}</h4>
+                <p class="product-desc"></p>
+                <div class="price product-single-price">${{value.precio}}</div>
+              </div>
+
+              <div class="_column product-modifiers" data-product-price="{{price}}">
+                <div class="_grid">
+                  <button class="_btn _column product-subtract" onclick ="quitar({{value.id}})">&minus;</button>
+                  <div class="_column product-qty">{{value.cantidad}}</div>
+                  <button class="_btn _column product-plus" onclick="agregar({{value.id}})">&plus;</button>
+                </div>
+
+                <button class="_btn entypo-trash product-remove" onclick="eliminar({{value.id}})">Remove</button>
+                <div class="price product-total-price">${{value.total}}</div>
+              </div>
+              
+          </li>
+          
+        </script>
+      </ol>
+      {% endfor %}
+      <footer class="_grid cart-totals">
+        <div class="_column subtotal" id="subtotalCtr">
+          <div class="cart-totals-key">Subtotal</div>
+          <div class="cart-totals-value">${{total}}</div>
+        </div>
+        <div class="_column shipping" id="shippingCtr">
+          <div class="cart-totals-key">Shipping</div>
+          <div class="cart-totals-value">$0.00</div>
+        </div>
+        <div class="_column taxes" id="taxesCtr">
+          <div class="cart-totals-key">Taxes (6%)</div>
+          <div class="cart-totals-value">$0.00</div>
+        </div>
+        <div class="_column total" id="totalCtr">
+          <div class="cart-totals-key">Total</div>
+          <div class="cart-totals-value">$0.00</div>
+        </div>
+        <div class="_column checkout">
+          <button class="_btn checkout-btn entypo-forward">Checkout</button>
+        </div>
+      </footer>
+    </section>
+
+    {% else %} {% endif %}
+  </div>
+</div>
+<script src="{% static 'JS/carrito.js' %}"></script>
+<script>
+  function eliminar(id) {
+    location.href = "/eliminar_car/" + id + "/";
+  }
+  function quitar(id) {
+    location.href = "/quitar/" + id + "/";
+  }
+  function agregar(id) {
+    location.href = "/agregar/" + id + "/";
+  }
+</script>
+{% endblock contenido %}

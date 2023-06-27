@@ -69,7 +69,7 @@
             <div class="btnañadir">
 
               <a href="{% url 'DES' obra.id_obra %}"><input type="button" class="btn btn1 btn-outline-primary" value="Ver Mas"></a>
-
+              <button onclick="ir({{obra.id_obra}})">Agregar</button>
             </div>
         </article>
         
@@ -78,6 +78,11 @@
   </div>
 </div>
       </section>
+      <script>
+        function ir(id){
+                location.href = '/agregar/'+id+'/';
+              }
+      </script>
 {% endblock contenido %}  
    
 

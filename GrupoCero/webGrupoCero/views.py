@@ -5,6 +5,8 @@ from django.contrib.auth import authenticate,logout,login as login_aut
 from django.contrib import messages
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required, permission_required
+from .carrito import *
 
 
 
@@ -120,6 +122,8 @@ def registro(request):
             contexto['mensaje']='error al grabar'    
     return render(request,"registro2.html",contexto)
 
+@login_required(login_url='/login')
+@permission_required('auth.user_user', login_url='/login')
 def perfil(request):
     mi_nombre= request.user.username
     tec = Tecnica.objects.all()
@@ -309,9 +313,13 @@ def perfil(request):
                 return render(request, 'perfil.html', data)
         
     return render(request, 'perfil.html', data)
-    
 
-        
+@login_required(login_url='/login')
+def eliminar(request,id):
+    obra=Obra.objects.get(id_obra=id)
+    obra.delete()
+
+    return redirect('/perfil/')
     
         
 
@@ -376,7 +384,42 @@ def verificar_usuario(request):
         except User.DoesNotExist:
             return JsonResponse({'available': True})
 
-def carrito(request):
+
+def administracion(request):
+    obras=Obra.objects.filter(estado=False)
+    data = {'obras':obras}
+    if request.method == "POST":
+        id = request.POST.get("txtid")
+        estado = request.POST.get("chkestado")
+        comentario = request.POST.get("txtcomentario")
+        obra = Obra.objects.get(id_obra=id)
+        obra.estado = estado
+        obra.comentario = comentario
+        obra.save()
+    return render(request,'administracion.html',data)
+
+def Carrito_compras(request):
     obras = Obra.objects.all()
     data = {'obras':obras}
     return render(request, 'carrito.html', data)
+
+def agregar_obra(request, id):
+    carro = Carrito(request)
+    obra = Obra.objects.get(id_obra = id)
+    carro.agregar(obra)
+    return redirect ('/galeria/')
+
+def quitar_obra(request,id):
+    carro = Carrito(request)
+    obra = Obra.objects.get(id_obra = id)
+    carro.quitar(obra)
+    return redirect ('/carrito/')
+
+def eliminar_obra(request,id):
+    carro = Carrito(request)
+    obra = Obra.objects.get(id_obra = id)
+    carro.eliminar(obra)
+    return redirect ('/carrito/')
+def limpiar_carrito(request):
+    carro = Carrito(request)
+    carro.vaciar()

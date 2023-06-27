@@ -19,6 +19,13 @@ urlpatterns=[
     path('filtro_categoria/<id>/',filtro_categoria,name='FILTRO_CATEGORIA'),
     path('buscar/', busca, name='BUSC'),
     path('verificar-usuario/', verificar_usuario, name='verificar_usuario'),
-    path('carrito/', carrito, name='CAR')
+    path('carrito/', Carrito_compras, name='CAR'),
+    path('eliminar/<id>/', eliminar, name='ELIM'),
+    path('administracion/', administracion, name='ADM'),
+
+    path('agregar/<id>/', agregar_obra, name = 'AO'),
+    path('quitar/<id>/', quitar_obra, name = 'QO'),
+    path('vaciar/', limpiar_carrito, name = 'LC'),
+    path('eliminar_car/<id>/', eliminar_obra, name = 'EO'),
 
 ]

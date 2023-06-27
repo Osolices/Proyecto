@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block contenido %}
+<link rel="stylesheet" href="{% static 'CSS/administracion.css' %}">
+
+<div class="boxxx">
+<h2>Ejemplo de tabla HTML</h2>
+<table>
+  <tr>
+    <th>Obra</th>
+    <th>Titulo</th>
+    <th>Estado</th>
+    <th>Comentario</th>
+  </tr>
+  {% for obra in  obras %}
+  <tr>
+    <td><img class="imagen" src="{{obra.foto.url}}" alt=""></td>
+    <td>{{obra.nombre}}</td>
+    <td>{{obra.estado}}
+      <form name="modificarobra-{{obra.id_obra}}"  class="form-modificarobra" action="{% url 'ADM' %}" 
+      id="modificarobra-{{obra.id_obra}}" method="post" enctype="multipart/form-data" >
+        {% csrf_token %}
+        <input class="estado" type="checkbox" name="chkestado" id="chkestado">
+        <input type="hidden" name="txtid" id="txtid" value="{{obra.id_obra}}">
+      
+    </td>
+    <td>
+      <textarea name="txtcomentario" id="" cols="30" rows="5"></textarea>
+      </form>
+      <input type="button" class="btn btn1 btn-outline-primary" data-bs-toggle="form"
+      data-bs-target="#modificarobra{{obra.id_obra}}" data-idobra="{{obra.id_obra}}" value="ENVIAR">
+    </td>
+  </tr>
+  {% endfor %}
+  
+  
+</table>
+</div>
+{% endblock contenido %}
