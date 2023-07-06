@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8E2DE2A7-3C68-2F90-2772-7C4E54C2A077" containerWithKeyObject="EF00870E-9528-451C-C9DD-F379BA631FAE" localFKIndex="7D30D40B-76C1-C7D3-5E24-0AA77508B16C" name="AUTH_USER_USER_ID_6A12ED8B_F">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>GRUPOCERO</sourceObjSchema>
+<sourceObjName>AUTH_USER_USER_ID_6A12ED8B_F</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<importedID>4BD16EDB-B53D-F6E9-E084-E964966A9B4B</importedID>
+<referredTableLongName>GRUPOCERO.AUTH_USER</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>DC2DDE99-B22C-3494-33D8-5AE5341DBDEF</referredTableID>
+<keyObject>9A2B14DD-E31D-4DDD-635B-A993DCAB582D</keyObject>
+<referredKeyID>9A2B14DD-E31D-4DDD-635B-A993DCAB582D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

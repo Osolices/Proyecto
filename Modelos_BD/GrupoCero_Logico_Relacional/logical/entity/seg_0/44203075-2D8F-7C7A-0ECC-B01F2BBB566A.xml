@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="44203075-2D8F-7C7A-0ECC-B01F2BBB566A" name="WEBGRUPOCERO PERFILES">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:47 UTC</createdTime>
+<generatorID>80FBCE9B-F8BD-F5D7-0A1C-D9E643D81E9B</generatorID>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<engineerTo>
+<item key="BC39B864-6542-971B-6DB2-4715FA250C8D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="7F71C7CE-DA80-76CB-8A1C-7BE5AD7C83D8">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:47 UTC</createdTime>
+<generatorID>1F80264F-43AE-6140-E5D8-0C03BEBF64B0</generatorID>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<engineerTo>
+<item key="BC39B864-6542-971B-6DB2-4715FA250C8D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,19,0</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AVATAR" id="DEECF710-91A4-FBEC-57F0-6A359A84FFCD">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:47 UTC</createdTime>
+<generatorID>D1AFA3B7-6FCF-952C-0CE7-8B50C49C403B</generatorID>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<engineerTo>
+<item key="BC39B864-6542-971B-6DB2-4715FA250C8D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="GRUPO" id="DCE4313C-5D79-EF23-CE09-DB7C48641E60">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:47 UTC</createdTime>
+<generatorID>3E23B6C5-B84A-0B45-2204-420C3351733C</generatorID>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<engineerTo>
+<item key="BC39B864-6542-971B-6DB2-4715FA250C8D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DESCRIPCION" id="BAD4AC17-642A-BA5A-4103-E5E68225E930">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:47 UTC</createdTime>
+<generatorID>F9D4AAEC-2835-ACFB-AFE3-9EC1055078BA</generatorID>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<engineerTo>
+<item key="BC39B864-6542-971B-6DB2-4715FA250C8D" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LogDes-7DD553FD-11E8-61FA-399D-2E531FB621D0@LOGDT10035</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USER ID" id="6BEBE5A9-ACF8-E772-088C-343ECB526193">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:47 UTC</createdTime>
+<generatorID>5614B6E6-F867-6CB4-8A4C-F54C89D9ED0D</generatorID>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<engineerTo>
+<item key="BC39B864-6542-971B-6DB2-4715FA250C8D" value="true"/>
+</engineerTo>
+<referedAttribute>38B5EB63-923F-26F9-1007-8001853DCEB4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,11,0</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="67782CD8-F906-6E96-289B-2D892A40A20A" name="WEBGRUPOCERO PERFILES PK">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:47 UTC</createdTime>
+<generatorID>AED55F2F-F665-5020-604C-3A32F8C0CBB1</generatorID>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<engineerTo>
+<item key="BC39B864-6542-971B-6DB2-4715FA250C8D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7F71C7CE-DA80-76CB-8A1C-7BE5AD7C83D8</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="7CCCD6C9-9D69-0A4D-D7F6-A66158B100F1" name="WEBGRUPOCERO PERFILES USER ID UN">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:47 UTC</createdTime>
+<generatorID>A9F4E39B-4653-FCDF-5B20-92B632A82375</generatorID>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<engineerTo>
+<item key="BC39B864-6542-971B-6DB2-4715FA250C8D" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>6BEBE5A9-ACF8-E772-088C-343ECB526193</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

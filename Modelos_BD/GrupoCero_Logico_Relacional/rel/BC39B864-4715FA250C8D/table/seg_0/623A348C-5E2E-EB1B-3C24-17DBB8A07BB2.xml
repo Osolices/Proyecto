@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="623A348C-5E2E-EB1B-3C24-17DBB8A07BB2" schemaObject="570AEA75-3DEA-C726-30BA-D41DC1C8AB71" name="WEBGRUPOCERO_CARRITO">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>GRUPOCERO</sourceObjSchema>
+<sourceObjName>WEBGRUPOCERO_CARRITO</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="61EF4E69-959C-84B9-537E-D9F3DABBEAE2">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>WEBGRUPOCERO_CARRITO</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,11,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="PRECIO" id="7FE38CCC-2C43-8543-A305-32D26A9AFB16">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>WEBGRUPOCERO_CARRITO</sourceObjSchema>
+<sourceObjName>PRECIO</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,11,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CANTIDAD" id="207547B3-A7B7-2980-F7F7-A72DF3CC075F">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>WEBGRUPOCERO_CARRITO</sourceObjSchema>
+<sourceObjName>CANTIDAD</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,11,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E6818504-353A-25E9-3D6B-98CD72CDCD75" schemaObject="570AEA75-3DEA-C726-30BA-D41DC1C8AB71" name="WEBGRUPOCERO_CARRITO_PK">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>GRUPOCERO</sourceObjSchema>
+<sourceObjName>SYS_C0018407</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:10 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61EF4E69-959C-84B9-537E-D9F3DABBEAE2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

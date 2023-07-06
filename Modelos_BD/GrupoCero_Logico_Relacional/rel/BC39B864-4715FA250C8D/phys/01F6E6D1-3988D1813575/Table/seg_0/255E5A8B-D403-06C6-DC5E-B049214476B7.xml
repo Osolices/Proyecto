@@ -1,0 +1,40 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="WEBGRUPOCERO_CATEGORIA" directorySegmentName="seg_0" id="255E5A8B-D403-06C6-DC5E-B049214476B7">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<schemaObject>570AEA75-3DEA-C726-30BA-D41DC1C8AB71</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>7D57B317-3459-2338-041C-6EA7DDF9DD62</segment>
+<tableSpace>A0D89A17-1F65-98AB-DC6E-4777470908F5</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NOMBRE" id="4E44CF86-4648-1745-23DD-55478CD91D2D">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FOTO" id="DAFD4930-4B41-4AF7-2388-5594BE3BFC5E">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="WEBGRUPOCERO_CATEGORIA_PK" id="6667CACF-5AA8-B49E-1604-11196E5A7787">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:11 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<schemaObject>570AEA75-3DEA-C726-30BA-D41DC1C8AB71</schemaObject>
+<segment>27DC59AC-8E75-10B8-D0D1-1BAE092641E9</segment>
+<tableSpace>A0D89A17-1F65-98AB-DC6E-4777470908F5</tableSpace>
+<indexSegment>27DC59AC-8E75-10B8-D0D1-1BAE092641E9</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

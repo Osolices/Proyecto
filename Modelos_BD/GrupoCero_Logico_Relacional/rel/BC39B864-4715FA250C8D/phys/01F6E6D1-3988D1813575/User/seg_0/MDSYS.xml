@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="MDSYS" directorySegmentName="seg_0" id="MDSYS">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjName>MDSYS</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:10:50 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<schemaObject>DECB3772-5611-66E7-2830-2FDDA4462208</schemaObject>
+<nullInstance>true</nullInstance>
+<storableNullInstance>true</storableNullInstance>
+<privileges>INHERIT ANY PRIVILEGES, ADMINISTER DATABASE TRIGGER, CREATE TRIGGER, CREATE ANY SEQUENCE, CREATE SEQUENCE, CREATE VIEW, DROP PUBLIC SYNONYM, CREATE PUBLIC SYNONYM, CREATE TABLE</privileges>
+<profile>DEFAULT</profile>
+<quotaItems>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem1" id="2EDD5230-9D96-750C-A7F4-EA759C56D589">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</QuotaItem>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem2" id="3AF9E4A7-52C7-8378-9EDA-7934E2D44D26">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</QuotaItem>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem1" id="B0BCCBA1-6A90-C040-519B-55BF1A203C54">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:19:30 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</QuotaItem>
+<QuotaItem class="oracle.dbtools.crest.model.design.storage.oracle.v10g.QuotaItemOraclev10g" name="QuotaItem2" id="293D65A6-222F-EB69-F73B-442494C85275">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:19:30 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</QuotaItem>
+</quotaItems>
+</UserOraclev10g>

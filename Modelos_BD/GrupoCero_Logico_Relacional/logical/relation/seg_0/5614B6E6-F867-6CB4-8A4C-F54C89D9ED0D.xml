@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="WEBGRUPOC_USER_ID_28DD0EE8_F" directorySegmentName="seg_0" id="5614B6E6-F867-6CB4-8A4C-F54C89D9ED0D">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:20:51 UTC</createdTime>
+<generatorID>B832E452-9014-FC13-A798-8261DFCCBC39</generatorID>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<engineerTo>
+<item key="BC39B864-6542-971B-6DB2-4715FA250C8D" value="true"/>
+</engineerTo>
+<sourcePk>744F94D4-77B9-3F81-0141-FE726AB3DA80</sourcePk>
+<dominantRole>B2B6E73B-BC97-F32F-4A37-852D871B46AF</dominantRole>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B2B6E73B-BC97-F32F-4A37-852D871B46AF</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>44203075-2D8F-7C7A-0ECC-B01F2BBB566A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,242 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DC2DDE99-B22C-3494-33D8-5AE5341DBDEF" schemaObject="570AEA75-3DEA-C726-30BA-D41DC1C8AB71" name="AUTH_USER">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>GRUPOCERO</sourceObjSchema>
+<sourceObjName>AUTH_USER</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<importedID>7D8EFA27-6343-5067-AB72-396448BA2849</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="69F089AE-AC7C-C971-1EBD-87B09DC12217">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>AUTH_USER</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<importedID>B72F5AC0-9977-DC03-08D1-6510645D7A7C</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,11,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="PASSWORD" id="8D84E74F-0DDD-42A5-4BCC-769FB13DF4B4">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>AUTH_USER</sourceObjSchema>
+<sourceObjName>PASSWORD</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<importedID>F311615F-91BD-FCF1-FE29-88B1B74CB8D8</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>128</dataTypeSize>
+<ownDataTypeParameters>128,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_LOGIN" id="1548B7B1-D95B-8CEA-2380-BB919BBF18F4">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>AUTH_USER</sourceObjSchema>
+<sourceObjName>LAST_LOGIN</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<importedID>E41147BD-4D20-8C63-9325-EFF9F6319F49</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IS_SUPERUSER" id="1F7B7855-4F9E-EEE8-C3F2-5CCA9BDB65C6">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>AUTH_USER</sourceObjSchema>
+<sourceObjName>IS_SUPERUSER</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<importedID>68417717-D7A8-5E9F-DDC5-10993F4C7848</importedID>
+<constraintName>SYS_C0018340</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="&quot;IS_SUPERUSER&quot; IN (0,1)"/>
+<implementationDef dbType="Oracle Database 21c" definition="&quot;IS_SUPERUSER&quot; IN (0,1)"/>
+</checkConstraint>
+<ownDataTypeParameters>,1,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USERNAME" id="BC5F9B8F-9F32-EB53-2A43-74825A1359E3">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>AUTH_USER</sourceObjSchema>
+<sourceObjName>USERNAME</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<importedID>2DB32265-DE07-6B7C-9C00-751FDAD06375</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIRST_NAME" id="10CC30C8-094A-9DFB-D8C8-627212C366DE">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>AUTH_USER</sourceObjSchema>
+<sourceObjName>FIRST_NAME</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<importedID>DEBEC6A7-7F23-AD3D-A0B4-5363092F03A6</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_NAME" id="D08553F2-B2EF-8C7F-0D74-9F674F155C20">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>AUTH_USER</sourceObjSchema>
+<sourceObjName>LAST_NAME</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<importedID>9C975B6C-A47C-0D66-D7DD-4CC66D4645F3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="191018BF-AFF2-11A7-2273-70EEFD9D5119">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>AUTH_USER</sourceObjSchema>
+<sourceObjName>EMAIL</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<importedID>586673BC-5734-469B-7B59-0A4D4521E95E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>254</dataTypeSize>
+<ownDataTypeParameters>254,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IS_STAFF" id="C10089DD-3460-EAA7-F19B-DAF0B5C5C65A">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>AUTH_USER</sourceObjSchema>
+<sourceObjName>IS_STAFF</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<importedID>FFEBA1E3-562D-D552-B3AD-F7C180A5CA5F</importedID>
+<constraintName>SYS_C0018341</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="&quot;IS_STAFF&quot; IN (0,1)"/>
+<implementationDef dbType="Oracle Database 21c" definition="&quot;IS_STAFF&quot; IN (0,1)"/>
+</checkConstraint>
+<ownDataTypeParameters>,1,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IS_ACTIVE" id="1DC0BBC8-963F-EC8B-AAE7-97CE569A5325">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>AUTH_USER</sourceObjSchema>
+<sourceObjName>IS_ACTIVE</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<importedID>7BCE51CD-06FC-22BD-9645-B74E8C9DBFB1</importedID>
+<constraintName>SYS_C0018342</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="&quot;IS_ACTIVE&quot; IN (0,1)"/>
+<implementationDef dbType="Oracle Database 21c" definition="&quot;IS_ACTIVE&quot; IN (0,1)"/>
+</checkConstraint>
+<ownDataTypeParameters>,1,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATE_JOINED" id="E145505B-AA9B-4A4F-EBE3-38F9D172847D">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>AUTH_USER</sourceObjSchema>
+<sourceObjName>DATE_JOINED</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<importedID>83BDC30A-53F2-383C-8991-89F09B217783</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9A2B14DD-E31D-4DDD-635B-A993DCAB582D" schemaObject="570AEA75-3DEA-C726-30BA-D41DC1C8AB71" name="AUTH_USER_PK">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>GRUPOCERO</sourceObjSchema>
+<sourceObjName>SYS_C0018343</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<importedID>484602C4-C25B-747B-113B-E8628D92AD9E</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="69F089AE-AC7C-C971-1EBD-87B09DC12217"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BE5347C2-095F-5824-58F5-37F4D6BCFDC0" schemaObject="570AEA75-3DEA-C726-30BA-D41DC1C8AB71" name="AUTH_USER_USERNAME_UN">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>GRUPOCERO</sourceObjSchema>
+<sourceObjName>SYS_C0018344</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<importedID>53883E14-FD84-8545-F94E-62D4AAE8BB6A</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BC5F9B8F-9F32-EB53-2A43-74825A1359E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

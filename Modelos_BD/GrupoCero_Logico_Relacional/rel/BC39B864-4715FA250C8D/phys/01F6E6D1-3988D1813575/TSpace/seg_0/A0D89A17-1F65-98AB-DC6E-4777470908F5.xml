@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableSpaceOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TableSpaceOraclev10g" name="USERS" directorySegmentName="seg_0" id="A0D89A17-1F65-98AB-DC6E-4777470908F5">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>GRUPOCERO</sourceObjSchema>
+<sourceObjName>USERS</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<dsInitialExtent>65536</dsInitialExtent>
+<dsMaxExtents>2147483645</dsMaxExtents>
+<emUniformSize>0</emUniformSize>
+<extentManagement>LOCAL</extentManagement>
+<minExtLen>65536</minExtLen>
+<dsCompression>NOCOMPRESS</dsCompression>
+<encrypt>NO</encrypt>
+<fileType>SMALLFILE</fileType>
+<inMemory>NO</inMemory>
+<dataFiles>
+<DataFile class="oracle.dbtools.crest.model.design.storage.oracle.v10g.DataFileOraclev10g" name="USERS01.DBF" id="CC483D0F-4102-4301-D861-58432A154310">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjName>C:\DATABASE\PRODUCT\21C\ORADATA\XE\USERS01.DBF</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:17:25 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<autoextend>ON</autoextend>
+<fileName>C:\DATABASE\PRODUCT\21C\ORADATA\XE\USERS01.DBF</fileName>
+<nextBlockSize>1280</nextBlockSize>
+<size>17920</size>
+</DataFile>
+</dataFiles>
+</TableSpaceOraclev10g>

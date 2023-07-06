@@ -1,0 +1,181 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C894ACBF-EAE0-B994-3BDD-B7B89FC5CFED" schemaObject="570AEA75-3DEA-C726-30BA-D41DC1C8AB71" name="WEBGRUPOCERO_GALERIA">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>GRUPOCERO</sourceObjSchema>
+<sourceObjName>WEBGRUPOCERO_GALERIA</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="AA91B6CC-E0DD-E1BA-6EDC-CA967D018AEB">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>WEBGRUPOCERO_GALERIA</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,11,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="FOTO_1" id="11791ADF-A38C-B6AC-08E8-CB74150694FF">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>WEBGRUPOCERO_GALERIA</sourceObjSchema>
+<sourceObjName>FOTO_1</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FOTO_2" id="3443C181-D4D9-2E83-5817-4C19FE45B32E">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>WEBGRUPOCERO_GALERIA</sourceObjSchema>
+<sourceObjName>FOTO_2</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FOTO_3" id="27D43A2E-C758-BB52-76BB-08115E76B07A">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>WEBGRUPOCERO_GALERIA</sourceObjSchema>
+<sourceObjName>FOTO_3</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ANGULO_1" id="EE7D4A0F-117F-27C3-D97F-F683C0B779CA">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>WEBGRUPOCERO_GALERIA</sourceObjSchema>
+<sourceObjName>ANGULO_1</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ANGULO_2" id="F6FCD073-19B5-4A25-2C96-286808B1B12A">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>WEBGRUPOCERO_GALERIA</sourceObjSchema>
+<sourceObjName>ANGULO_2</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ANGULO_3" id="C59964E1-CFED-0CE0-D57C-ED53D614CC96">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>WEBGRUPOCERO_GALERIA</sourceObjSchema>
+<sourceObjName>ANGULO_3</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OBRA_ID" id="DE047756-AAC7-72F1-B206-4A5419510A5C">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>WEBGRUPOCERO_GALERIA</sourceObjSchema>
+<sourceObjName>OBRA_ID</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,11,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6D8C0C04-E974-4D68-7D72-E1778A82FB5D" referredColumn="1C3993CD-6F76-9EA6-E9FD-BDE9BD10C954"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A1C8B43B-CC02-E0E8-12A3-821D4C03E040" schemaObject="570AEA75-3DEA-C726-30BA-D41DC1C8AB71" name="WEBGRUPOCERO_GALERIA_PK">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>GRUPOCERO</sourceObjSchema>
+<sourceObjName>SYS_C0018398</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:10 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA91B6CC-E0DD-E1BA-6EDC-CA967D018AEB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B5B4C13A-312F-2204-A7B6-5EB44A30A126" schemaObject="570AEA75-3DEA-C726-30BA-D41DC1C8AB71" name="WEBGRUPOCE_OBRA_ID_A6FA9123">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>GRUPOCERO</sourceObjSchema>
+<sourceObjName>WEBGRUPOCE_OBRA_ID_A6FA9123</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:10 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DE047756-AAC7-72F1-B206-4A5419510A5C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="95DC2877-6168-74F4-0194-23DBACDE9CA0" name="WEBGRUPOC_OBRA_ID_A6FA9123_F">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:11 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DE047756-AAC7-72F1-B206-4A5419510A5C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

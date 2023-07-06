@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="80FBCE9B-F8BD-F5D7-0A1C-D9E643D81E9B" schemaObject="570AEA75-3DEA-C726-30BA-D41DC1C8AB71" name="WEBGRUPOCERO_PERFILES">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>GRUPOCERO</sourceObjSchema>
+<sourceObjName>WEBGRUPOCERO_PERFILES</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="1F80264F-43AE-6140-E5D8-0C03BEBF64B0">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>WEBGRUPOCERO_PERFILES</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>19</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,19,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="AVATAR" id="D1AFA3B7-6FCF-952C-0CE7-8B50C49C403B">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>WEBGRUPOCERO_PERFILES</sourceObjSchema>
+<sourceObjName>AVATAR</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GRUPO" id="3E23B6C5-B84A-0B45-2204-420C3351733C">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>WEBGRUPOCERO_PERFILES</sourceObjSchema>
+<sourceObjName>GRUPO</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCION" id="F9D4AAEC-2835-ACFB-AFE3-9EC1055078BA">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>WEBGRUPOCERO_PERFILES</sourceObjSchema>
+<sourceObjName>DESCRIPCION</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LogDes-7DD553FD-11E8-61FA-399D-2E531FB621D0@LOGDT10035</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_ID" id="020CB0B4-4CEC-1F11-BD7E-1807CAE8B449">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>WEBGRUPOCERO_PERFILES</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,11,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B832E452-9014-FC13-A798-8261DFCCBC39" referredColumn="69F089AE-AC7C-C971-1EBD-87B09DC12217"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AED55F2F-F665-5020-604C-3A32F8C0CBB1" schemaObject="570AEA75-3DEA-C726-30BA-D41DC1C8AB71" name="WEBGRUPOCERO_PERFILES_PK">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>GRUPOCERO</sourceObjSchema>
+<sourceObjName>SYS_C0018387</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:10 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1F80264F-43AE-6140-E5D8-0C03BEBF64B0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A9F4E39B-4653-FCDF-5B20-92B632A82375" schemaObject="570AEA75-3DEA-C726-30BA-D41DC1C8AB71" name="WEBGRUPOCERO_PERFILES_USER_ID_UN">
+<sourceConnName>GrupoCero</sourceConnName>
+<sourceObjSchema>GRUPOCERO</sourceObjSchema>
+<sourceObjName>SYS_C0018388</sourceObjName>
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:10 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="020CB0B4-4CEC-1F11-BD7E-1807CAE8B449"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="174F7BC7-2235-2B88-BB25-7DBB5ECFE8B8" name="WEBGRUPOC_USER_ID_28DD0EE8_F">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:11 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="020CB0B4-4CEC-1F11-BD7E-1807CAE8B449"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

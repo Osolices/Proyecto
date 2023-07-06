@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="WEBGRUPOCERO_TECNICA" directorySegmentName="seg_0" id="5797EE0D-31C0-EFE7-709E-A1A3B1ED3610">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<schemaObject>570AEA75-3DEA-C726-30BA-D41DC1C8AB71</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>7D57B317-3459-2338-041C-6EA7DDF9DD62</segment>
+<tableSpace>A0D89A17-1F65-98AB-DC6E-4777470908F5</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="NOMBRE" id="73DB6603-098E-DBA7-1CF5-D999BD04CBE9">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="WEBGRUPOCERO_TECNICA_PK" id="3004A18A-BA42-D8D5-86F9-2B9CB6AE92E6">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:11 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<schemaObject>570AEA75-3DEA-C726-30BA-D41DC1C8AB71</schemaObject>
+<segment>27DC59AC-8E75-10B8-D0D1-1BAE092641E9</segment>
+<tableSpace>A0D89A17-1F65-98AB-DC6E-4777470908F5</tableSpace>
+<indexSegment>27DC59AC-8E75-10B8-D0D1-1BAE092641E9</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

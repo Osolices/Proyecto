@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="GrupoCero_Logico_Relacional" id="1EF0370E-1541-9148-B245-4D2296A4F3AC" version="3.5">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:09:45 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>1EF0370E-1541-9148-B245-4D2296A4F3AC</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="87F1BDA6-A584-571E-7CB6-A777E472C17C">
+<designStoragePath>C:\Users\danie\OneDrive - Fundacion Instituto Profesional Duoc UC\Clases\Programacion Base de Datos\Clase 25</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="06840C33-2B03-023F-1F58-8BCFB6225F42">
+<designStoragePath>C:\Users\danie\OneDrive - Fundacion Instituto Profesional Duoc UC\Clases\Programacion Base de Datos\Clase 25</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

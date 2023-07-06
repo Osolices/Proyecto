@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="WEBGRUPOCERO_GALERIA" directorySegmentName="seg_0" id="C894ACBF-EAE0-B994-3BDD-B7B89FC5CFED">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<schemaObject>570AEA75-3DEA-C726-30BA-D41DC1C8AB71</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>B7CCD7E1-2BEF-716F-3C01-6CCE8462F4B3</segment>
+<tableSpace>A0D89A17-1F65-98AB-DC6E-4777470908F5</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="FOTO_1" id="11791ADF-A38C-B6AC-08E8-CB74150694FF">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FOTO_3" id="27D43A2E-C758-BB52-76BB-08115E76B07A">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FOTO_2" id="3443C181-D4D9-2E83-5817-4C19FE45B32E">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="AA91B6CC-E0DD-E1BA-6EDC-CA967D018AEB">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="ANGULO_3" id="C59964E1-CFED-0CE0-D57C-ED53D614CC96">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OBRA_ID" id="DE047756-AAC7-72F1-B206-4A5419510A5C">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ANGULO_1" id="EE7D4A0F-117F-27C3-D97F-F683C0B779CA">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ANGULO_2" id="F6FCD073-19B5-4A25-2C96-286808B1B12A">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="WEBGRUPOCE_OBRA_ID_A6FA9123" id="B5B4C13A-312F-2204-A7B6-5EB44A30A126">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:10 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<schemaObject>570AEA75-3DEA-C726-30BA-D41DC1C8AB71</schemaObject>
+<segment>8425FA80-ED85-3934-6EA5-571343033922</segment>
+<tableSpace>A0D89A17-1F65-98AB-DC6E-4777470908F5</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="WEBGRUPOC_OBRA_ID_A6FA9123_F" id="95DC2877-6168-74F4-0194-23DBACDE9CA0">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:11 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<deferrable>YES</deferrable>
+<initially>DEFERRED</initially>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="WEBGRUPOCERO_GALERIA_PK" id="A1C8B43B-CC02-E0E8-12A3-821D4C03E040">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:11 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<schemaObject>570AEA75-3DEA-C726-30BA-D41DC1C8AB71</schemaObject>
+<segment>8425FA80-ED85-3934-6EA5-571343033922</segment>
+<tableSpace>A0D89A17-1F65-98AB-DC6E-4777470908F5</tableSpace>
+<indexSegment>8425FA80-ED85-3934-6EA5-571343033922</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

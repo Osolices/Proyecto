@@ -1,0 +1,176 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="WEBGRUPOCERO_OBRA" directorySegmentName="seg_0" id="B73E5330-2FA9-CF89-516B-22855E48895F">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<schemaObject>570AEA75-3DEA-C726-30BA-D41DC1C8AB71</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>7D57B317-3459-2338-041C-6EA7DDF9DD62</segment>
+<tableSpace>A0D89A17-1F65-98AB-DC6E-4777470908F5</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_OBRA" id="1C3993CD-6F76-9EA6-E9FD-BDE9BD10C954">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="ESTADO" id="1CA030BF-BECC-CCF9-C10E-B7745FC4B1A9">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FOTO" id="33372FB3-62BA-D5B4-C4A7-F95D812B6012">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOMBRE" id="3906A4B1-7F1B-C617-66B6-94CFCCE5C092">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AUTOR_ID" id="39DA702D-64AB-5A2F-446E-B4E30801F2E4">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="COMENTARIO" id="41C17E7B-B034-E54E-1E85-CD6747EF5E57">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DESCRIPCION" id="5CC497D7-A844-2E7E-5576-77C5101C20E8">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CATEGORIA_ID" id="9A91652E-C87C-E3FF-FE0A-0F89DE9A07BB">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TECNICA_ID" id="E202D3E1-B8C2-86E1-4E2A-71E8CE27C234">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PRECIO" id="EF349BAB-0BFB-A902-5445-D502B61EA700">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="HISTORIA" id="F8466F2A-01FA-D371-C0A5-ED6CB7126355">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:09 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="WEBGRUPOCE_TECNICA_ID_8629D105" id="A5572947-A771-0348-0046-F0523E474547">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:10 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<schemaObject>570AEA75-3DEA-C726-30BA-D41DC1C8AB71</schemaObject>
+<segment>27DC59AC-8E75-10B8-D0D1-1BAE092641E9</segment>
+<tableSpace>A0D89A17-1F65-98AB-DC6E-4777470908F5</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="WEBGRUPOCE_CATEGORIA__E1D0EA6B" id="B12AB174-48DA-F4DE-3A7F-0F8126A86A0D">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:10 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<schemaObject>570AEA75-3DEA-C726-30BA-D41DC1C8AB71</schemaObject>
+<segment>27DC59AC-8E75-10B8-D0D1-1BAE092641E9</segment>
+<tableSpace>A0D89A17-1F65-98AB-DC6E-4777470908F5</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="WEBGRUPOCE_AUTOR_ID_84828FFC" id="B70EEBC1-B089-0500-D9FE-7F3F5DE25924">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:10 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<schemaObject>570AEA75-3DEA-C726-30BA-D41DC1C8AB71</schemaObject>
+<segment>27DC59AC-8E75-10B8-D0D1-1BAE092641E9</segment>
+<tableSpace>A0D89A17-1F65-98AB-DC6E-4777470908F5</tableSpace>
+</IndexProxy>
+</indexProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="WEBGRUPOC_TECNICA_I_8629D105_F" id="68571F24-46BD-E698-E720-D3B7B4B4993A">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:11 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<deferrable>YES</deferrable>
+<initially>DEFERRED</initially>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="WEBGRUPOC_AUTOR_ID_84828FFC_F" id="6B97D94C-C76D-0FB7-EC11-87F28CB22B7E">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:11 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<deferrable>YES</deferrable>
+<initially>DEFERRED</initially>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="WEBGRUPOC_CATEGORIA_E1D0EA6B_F" id="C69CCE39-CE53-D966-D78D-032FB85BDBAA">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:11 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<deferrable>YES</deferrable>
+<initially>DEFERRED</initially>
+</ForeignKey>
+</foreignKeys>
+<lobStorages>
+<LobStorage class="oracle.dbtools.crest.model.design.storage.oracle.v11g.LobStorageOraclev11g" name="SYS_LOB0000083514C00003$$" id="525D6D97-BA16-EDAD-8ED2-9637C42121BF">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:11 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<cache>NOCACHE</cache>
+<chunk>8192</chunk>
+<column>HISTORIA</column>
+<compression>NO</compression>
+<duplication>KEEP_DUPLICATES</duplication>
+<logging>YES</logging>
+<tableSpace>A0D89A17-1F65-98AB-DC6E-4777470908F5</tableSpace>
+<lobStorageType>SECUREFILE</lobStorageType>
+</LobStorage>
+<LobStorage class="oracle.dbtools.crest.model.design.storage.oracle.v11g.LobStorageOraclev11g" name="SYS_LOB0000083514C00004$$" id="44DFD167-4FB4-377D-6161-6A4BCA9AFAB3">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:11 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<cache>NOCACHE</cache>
+<chunk>8192</chunk>
+<column>DESCRIPCION</column>
+<compression>NO</compression>
+<duplication>KEEP_DUPLICATES</duplication>
+<logging>YES</logging>
+<tableSpace>A0D89A17-1F65-98AB-DC6E-4777470908F5</tableSpace>
+<lobStorageType>SECUREFILE</lobStorageType>
+</LobStorage>
+<LobStorage class="oracle.dbtools.crest.model.design.storage.oracle.v11g.LobStorageOraclev11g" name="SYS_LOB0000083514C00008$$" id="457E4122-F029-70FC-AD40-D6FC68093B11">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:11 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<cache>NOCACHE</cache>
+<chunk>8192</chunk>
+<column>COMENTARIO</column>
+<compression>NO</compression>
+<duplication>KEEP_DUPLICATES</duplication>
+<logging>YES</logging>
+<tableSpace>A0D89A17-1F65-98AB-DC6E-4777470908F5</tableSpace>
+<lobStorageType>SECUREFILE</lobStorageType>
+</LobStorage>
+</lobStorages>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="WEBGRUPOCERO_OBRA_PK" id="D1DB8198-00F5-F5D8-32BD-02A926AE5284">
+<createdBy>danie</createdBy>
+<createdTime>2023-07-06 14:11:11 UTC</createdTime>
+<ownerDesignName>GrupoCero_Logico_Relacional</ownerDesignName>
+<schemaObject>570AEA75-3DEA-C726-30BA-D41DC1C8AB71</schemaObject>
+<segment>27DC59AC-8E75-10B8-D0D1-1BAE092641E9</segment>
+<tableSpace>A0D89A17-1F65-98AB-DC6E-4777470908F5</tableSpace>
+<indexSegment>27DC59AC-8E75-10B8-D0D1-1BAE092641E9</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>
