@@ -65,6 +65,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'webGrupoCero.procesos.total',
+                'webGrupoCero.procesos.cantidad'
             ],
         },
     },
@@ -77,9 +78,15 @@ WSGI_APPLICATION = 'GrupoCero.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    
+    "default": {
+        "ENGINE": "django.db.backends.oracle",
+        "NAME": "xe",
+        "USER": "GrupoCero",
+        "PASSWORD": "grupocero",
+        "HOST": "localhost",
+        "PORT": "1521",
+    
     }
 }
 

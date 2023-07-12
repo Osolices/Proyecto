@@ -7,6 +7,8 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required, permission_required
 from .carrito import *
+import json
+
 
 
 
@@ -103,6 +105,7 @@ def descripcion(request, id):
         data= {'obra':obra}
         return render(request,"descripcion.html", data)
 
+
 def registro(request):
     contexto={'mensaje':''}
     if request.POST:
@@ -122,8 +125,38 @@ def registro(request):
             contexto['mensaje']='error al grabar'    
     return render(request,"registro2.html",contexto)
 
-@login_required(login_url='/login')
-@permission_required('auth.user_user', login_url='/login')
+
+@login_required(login_url='/ingreso/')
+@permission_required('auth.add_user', login_url='/ingreso/')
+def registro_artistas(request):
+    contexto={'mensaje':''}
+    if request.POST:
+        usuario = request.POST.get("usuario")
+        nombre = request.POST.get("nombre")
+        apellido= request.POST.get("apellido")
+        pass1= request.POST.get("pass1")
+        usu = User()
+        usu.set_password(pass1)
+        usu.username=usuario
+        usu.last_name=apellido
+        usu.first_name=nombre
+        
+        try:
+            print('1Grabo usuaraio') 
+            usu.save()
+            print('2Grabo usuaraio') 
+            group=Group.objects.get(name='Artistas')
+            usu.groups.add(group)
+            contexto['mensaje']='grabo el usuario'  
+            print('Grabo usuaraio')  
+        except:
+            contexto['mensaje']='error al grabar'    
+    return render(request,"registro_artista.html",contexto)
+
+@login_required(login_url='')
+@permission_required(['webGrupoCero.add_obra',
+                      'webGrupoCero.delete_obra',
+                      'webGrupoCero.add_perfil'], login_url='')
 def perfil(request):
     mi_nombre= request.user.username
     tec = Tecnica.objects.all()
@@ -314,16 +347,14 @@ def perfil(request):
         
     return render(request, 'perfil.html', data)
 
-@login_required(login_url='/login')
+@login_required(login_url='/ingreso/')
+@permission_required('webGrupoCero.delete_obra' , login_url='/ingreso/')
 def eliminar(request,id):
     obra=Obra.objects.get(id_obra=id)
     obra.delete()
 
     return redirect('/perfil/')
     
-        
-
-
 def busca(request):
     artistas = User.objects.all()
     obras = Obra.objects.all()
@@ -384,7 +415,8 @@ def verificar_usuario(request):
         except User.DoesNotExist:
             return JsonResponse({'available': True})
 
-
+@login_required(login_url='/ingreso/')
+@permission_required('webGrupoCero.view_obra' , login_url='/ingreso/')
 def administracion(request):
     obras=Obra.objects.filter(estado=False)
     data = {'obras':obras}
@@ -403,12 +435,18 @@ def Carrito_compras(request):
     data = {'obras':obras}
     return render(request, 'carrito.html', data)
 
+
+def agregar_obra_car(request, id):
+    carro = Carrito(request)
+    obra = Obra.objects.get(id_obra = id)
+    carro.agregar(obra)
+    return redirect ('/carrito/')
+
 def agregar_obra(request, id):
     carro = Carrito(request)
     obra = Obra.objects.get(id_obra = id)
     carro.agregar(obra)
     return redirect ('/galeria/')
-
 def quitar_obra(request,id):
     carro = Carrito(request)
     obra = Obra.objects.get(id_obra = id)
@@ -423,3 +461,17 @@ def eliminar_obra(request,id):
 def limpiar_carrito(request):
     carro = Carrito(request)
     carro.vaciar()
+    return redirect ('/carrito/')
+
+def comprar(request):
+    carro = Carrito(request)
+    json.dump(carro,str)
+    print(carro)
+    compra = Compra(
+                    productos = carro
+                    
+                )
+    compra.save()
+
+    return render ('/carrito/')
+

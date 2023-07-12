@@ -18,19 +18,32 @@
   <tr>
     <td><img class="imagen" src="{{obra.foto.url}}" alt=""></td>
     <td>{{obra.nombre}}</td>
-    <td>{{obra.estado}}
       <form name="modificarobra-{{obra.id_obra}}"  class="form-modificarobra" action="{% url 'ADM' %}" 
       id="modificarobra-{{obra.id_obra}}" method="post" enctype="multipart/form-data" >
         {% csrf_token %}
-        <input class="estado" type="checkbox" name="chkestado" id="chkestado">
+        <select class="estado"  name="chkestado" id="chkestado">
+          <option value="False">Desaprobado</option>
+          <option value="True">Aprobado</option>
+        </select>
+        
         <input type="hidden" name="txtid" id="txtid" value="{{obra.id_obra}}">
       
     </td>
     <td>
       <textarea name="txtcomentario" id="" cols="30" rows="5"></textarea>
       </form>
-      <input type="button" class="btn btn1 btn-outline-primary" data-bs-toggle="form"
-      data-bs-target="#modificarobra{{obra.id_obra}}" data-idobra="{{obra.id_obra}}" value="ENVIAR">
+      <button type="button" class="btn btn-primary" onclick="Swal.fire({
+        title: '¿Estas seguro?',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, Modificar!',
+        cancelButtonText: 'Cancelar  '
+      }).then((result) => {
+        if (result.isConfirmed) {
+          document.getElementById('modificarobra-{{obra.id_obra}}').submit();
+          }
+      });">Modificar</button>
     </td>
   </tr>
   {% endfor %}

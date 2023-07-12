@@ -8,8 +8,10 @@
   margin-left: 10em;
   margin-right: 10em;
   margin-top:  3em;
+
 }
   table {
+      height: 100%;
       width: 100%;
       border-collapse: collapse;
     }

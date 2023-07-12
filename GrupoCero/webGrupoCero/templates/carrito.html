@@ -2,22 +2,202 @@
 <link rel="stylesheet" href="{% static 'CSS/carrito.css' %}" />
 
 <div class="boxxx">
-
+  <header id="title">
+    <h1 style="
+    margin-left: 35%;
+    color: white;
+    font-family:'Sansita', sans-serif, bold ;">Carrito de Arte</h1>
+  </header>
       {% if request.session.carrito.items %}
+
+  <div class="carrito">
+      <table class="cart">
+        <thead>
+          <tr>
+            <th class="first">Imagen</th>
+            <th class="second">Obra</th>
+            <th class="third">Cantidad</th>
+            <th class="fourth">Precio</th>
+            <th class="fourth">Valor Total</th>
+            <th class="fifth">&nbsp;</th>
+          </tr>
+        </thead>
+        
       {% for key, value in request.session.carrito.items  %}
-      <ul></ul>
-      <li>
-        <h1>{{value.precio}}</h1>
-      </li>
+      <tbody>
 
+          <tr class="items" style="background-color:rgba(79, 88, 188, 0.443);">
+            
+            <td><img src="{{value.foto}}" width="150em" height="200em" class="foto"></td>
+            <td><div style=" width: 100%;
+              height: 35px;
+              font-size:20px;
+              text-align: center;
+              font-weight:bold;
+              font-family:'Sansita', sans-serif, bold ;
+              ">
+              {{value.nombre}}</div></td>
+            <td><button style="
+              width: 100%;
+              height: 35px;
+              font-size:20px;
+              text-align: center;
+              font-weight:bold;
+              font-family:courier;
+              background-color:rgba(48, 54, 122, 0.525);" onclick="agregar({{value.id}})">+</button>
+              <span style=" width: 100%;
+              height: 35px;
+              font-size:20px;
+              text-align: center;
+              font-weight:bold;
+              font-family:'Sansita', sans-serif, bold ;
+              ">{{value.cantidad}}</span>
+              <button style="
+              width: 100%;
+              height: 35px;
+              font-size:20px;
+              text-align: center;
+              font-weight:bold;
+              font-family:courier;
+              background-color:rgba(121, 37, 37, 0.466);"onclick="quitar({{value.id}})">-</button>
+              </td>
+            <td><span style=" width: 100%;
+              height: 35px;
+              font-size:20px;
+              text-align: center;
+              font-weight:bold;
+              font-family:'Sansita', sans-serif, bold ;
+              ">${{value.precio}}</span></td>
+            <td><span style=" width: 100%;
+              height: 35px;
+              font-size:20px;
+              text-align: center;
+              font-weight:bold;
+              font-family:'Sansita', sans-serif, bold ;
+              ">${{value.total}}
+            </span></td>
+            <td><span class="remove">
+           </span>
+              <button style="
+              width: 100%;
+              height: 35px;
+              font-size:13px;
+              text-align: center;
+              font-weight:bold;
+              font-family:courier;
+              background-color:rgba(37, 69, 121, 0.466);"onclick="eliminar({{value.id}})">
+              <img src="https://i.imgur.com/h1ldGRr.png" alt="X">
+              Eliminar</button></td>
+          </tr>
+         
+          
+          
       {% endfor %}
-
+      <!-- subtotal -->
+      <tr>
+        <td style="
+        height: 35px;
+        font-size:15px;
+        text-align: center;
+        font-weight:bold;
+        font-family:'Sansita', sans-serif, bold ;
+          background-color: #39537e8b;">Cantidad de productos: </td>
+        <td style="height: 35px;
+        font-size:20px;
+        text-align: center;
+        font-weight:bold;
+        font-family:'Sansita', sans-serif, bold ;
+        background-color: #39537e8b;">{{cantidades}}</td>
+      </tr>
+      <tr>
+        <td id="valores" style="height: 35px;
+        font-size:15px;
+        text-align: center;
+        font-weight:bold;
+        font-family:'Sansita', sans-serif, bold ;
+          background-color: #39537e8b;">Valor del dolar:</td>
+        <td class="valores" style="
+              height: 35px;
+              font-size:20px;
+              text-align: center;
+              font-weight:bold;
+              font-family:'Sansita', sans-serif, bold ;
+              background-color: #39537e8b;">$<span id="lightXXX"></span></td>
+      </tr>
+      <tr class="totalprice">
+        <td id="valores" style="height: 35px;
+        font-size:15px;
+        text-align: center;
+        font-weight:bold;
+        font-family:'Sansita', sans-serif, bold ;
+          background-color: #39537e8b;">Precio total en pesos Chilenos:</td>
+        <td class="valores" style="height: 35px;
+        font-size:20px;
+        text-align: center;
+        font-weight:bold;
+        font-family:'Sansita', sans-serif, bold ;
+        background-color: #39537e8b;">$<span id="num1">{{total}}</span></td>
+      </tr>
+      <tr>
+        <td class="valores" style="height: 35px;
+        font-size:15px;
+        text-align: center;
+        font-weight:bold;
+        font-family:'Sansita', sans-serif, bold ;
+          background-color: #39537e8b;">Precio total en Dolares:</td>
+        <td class="valores" style="height: 35px;
+        font-size:20px;
+        text-align: center;
+        font-weight:bold;
+        font-family:'Sansita', sans-serif, bold ;
+        background-color: #39537e8b;">$<span id="result"></span></td>
+      </tr>
+      
+        </div>
+          
+          <!-- checkout btn -->
+          <tr class="checkoutrow">
+            <td colspan="6" class="checkout"><button id="submitbtn" style="width: 100%;
+              height: 35px;
+              font-size:20px;
+              text-align: center;
+              font-weight:bold;
+              font-family:courier;
+              color: white;
+              background-color:rgba(37, 69, 121, 0.466);"onclick="vaciar()"">Vaciar Carrito</button></td>
+          </tr>
+          <tr class="checkoutrow">
+            <td colspan="6" class="checkout"><button id="submitbtn" style="width: 100%;
+              height: 35px;
+              font-size:20px;
+              text-align: center;
+              font-weight:bold;
+              font-family:courier;
+              color: white;
+              background-color:rgba(37, 69, 121, 0.466);"onclick="comprar()"">Comprar Ahora!</button></td>
+          </tr>
+        </tbody>
+      </table>
 
     {% else %} {% endif %}
-  </div>
+
 </div>
-<script src="{% static 'JS/carrito.js' %}"></script>
+</div>
+
 <script>
+  $(document).ready(function() {
+              $.getJSON('https://mindicador.cl/api', function(data) {
+                var dailyIndicators = data;
+                document.getElementById("lightXXX").innerHTML = data.dolar.valor;
+                multiply();
+              });
+            });
+   function multiply() {
+              let num1 = parseFloat(document.getElementById('num1').textContent);
+              let num2 = parseFloat(document.getElementById('lightXXX').textContent);
+              let result = num1 / num2;
+              document.getElementById('result').textContent = result.toFixed(2);
+            }
   function eliminar(id) {
     location.href = "/eliminar_car/" + id + "/";
   }
@@ -25,7 +205,13 @@
     location.href = "/quitar/" + id + "/";
   }
   function agregar(id) {
-    location.href = "/agregar/" + id + "/";
+    location.href = "/agregar_car/" + id + "/";
+  }
+  function vaciar() {
+    location.href = "/vaciar/";
+  }
+  function comprar() {
+    location.href = "/comprar/";
   }
 </script>
 {% endblock contenido %}

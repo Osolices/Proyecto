@@ -63,3 +63,10 @@ class Contacto(models.Model):
 
     def __str__(self) -> str:
         return super().__str__()    
+
+class Compra(models.Model):
+    id= models.AutoField(primary_key=True)
+    productos = models.JSONField()
+    
+    def __str__(self) -> str:
+        return super().__str__() 
